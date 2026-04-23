@@ -13,7 +13,7 @@ import mysql.connector
         database="u760464709_24005367_bd"
 
 @app.route('/Clientes')
-def productos():
+def clientes():
     mycursor = mydb.cursor()
     mycursor.execute("SELECT * FROM Clientes")
     myresult = mycursor.fetchall()
