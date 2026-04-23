@@ -12,10 +12,10 @@ import mysql.connector
         password="Q4Q?ZfPc+k",
         database="u760464709_24005367_bd"
 
-@app.route('/productos')
+@app.route('/Clientes')
 def productos():
     mycursor = mydb.cursor()
-    mycursor.execute("SELECT * FROM productos")
+    mycursor.execute("SELECT * FROM Clientes")
     myresult = mycursor.fetchall()
     return make_response(jsonify(myresult))
 
