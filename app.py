@@ -15,7 +15,7 @@ def Usuarios():
         database="u760464709_24005367_bd"
     )
     mycursor = mydb.cursor()
-    mycursor.execute("SELECT * FROM Cliente")
+    mycursor.execute("SELECT * FROM Usuarios")
     myresult = mycursor.fetchall()
     return make_response(jsonify(myresult))
 
