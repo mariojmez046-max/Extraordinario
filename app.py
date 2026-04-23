@@ -5,19 +5,15 @@ from flask_cors import CORS, cross_origin
 app = Flask(__name__)
 CORS(app)
 
-@app.route('/Clientes')
-def Clientes():
+@app.route('/Usuarios')
+def Usuarios():
     import mysql.connector
-import mysql.connector
     mydb = mysql.connector.connect(
         host="46.28.42.226",
         user="u760464709_24005367_usr",
         password="Q4Q?ZfPc+k",
         database="u760464709_24005367_bd"
     )
-
-@app.route('/Clientes')
-def cliente():
     mycursor = mydb.cursor()
     mycursor.execute("SELECT * FROM Cliente")
     myresult = mycursor.fetchall()
