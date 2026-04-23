@@ -22,7 +22,7 @@ def usuarios():
 @app.post('/Usuario')
 def usuario():
     mycursor = mydb.cursor()
-    sql = "INSERT INTO Usuarios (correo, contrasena, nombre) VALUES (%s, %s, %s, %s)"
+    sql = "INSERT INTO Usuarios (correo, contrasena, nombre) VALUES (%s, %s, %s)"
     val = (request.form['txtNombre'], request.form['cboCategoria'], request.form['txtPrecio'], request.form['txtExistencias'])
     mycursor.execute(sql, val)
     mydb.commit()
