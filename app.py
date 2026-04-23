@@ -12,15 +12,15 @@ import mysql.connector
         password="Q4Q?ZfPc+k",
         database="u760464709_24005367_bd"
 
-@app.route('/Usuario')
-def clientes():
+@app.route('/Usuarios')
+def usuarios():
     mycursor = mydb.cursor()
     mycursor.execute("SELECT * FROM Usuarios")
     myresult = mycursor.fetchall()
     return make_response(jsonify(myresult))
 
 @app.post('/Usuario')
-def producto():
+def usuario():
     mycursor = mydb.cursor()
     sql = "INSERT INTO Usuarios (correo, contrasena, nombre) VALUES (%s, %s, %s, %s)"
     val = (request.form['txtNombre'], request.form['cboCategoria'], request.form['txtPrecio'], request.form['txtExistencias'])
